@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+    background-color: #950;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+    float: left;
+    width: 10%;
+    height: 300px; /* only for demonstration, should be removed */
+    background: white;
+    padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+
+/* Clear floats after the columns */
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the footer */
+footer {
+    background-color: #950;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<h2>CSS Layout Float</h2>
+<p>Projekt</p>
+<p>Strona główna i 3 podstrony</p>
+
+<header>
+  <h2>Projekt</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Sekcja1</a></li>
+      <li><a href="#">Sekcja2</a></li>
+      <li><a href="#">Sekcja3</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Strona projektu</h1>
+  </article>
+</section>
+
+<footer>
+  <p>Stopka</p>
+</footer>
+
+</body>
+</html>
